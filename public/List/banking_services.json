@@ -1,0 +1,77 @@
+{
+  "corporateInvestmentBanking": {
+    "title": "Corporate & Investment Banking Solutions",
+    "items": [
+      {
+        "id": "cib_item_1",
+        "name": "Capital markets expertise",
+        "checked": false
+      },
+      {
+        "id": "cib_item_2",
+        "name": "Green and sustainable finance case studies",
+        "checked": false
+      },
+      {
+        "id": "cib_item_3",
+        "name": "Structured financing solutions",
+        "checked": false
+      },
+      {
+        "id": "cib_item_4",
+        "name": "M&A advisory capabilities",
+        "checked": false
+      }
+    ]
+  },
+  "esgGreenFinance": {
+    "title": "ESG / Green Finance Platform",
+    "items": [
+      {
+        "id": "esg_item_1",
+        "name": "ESG innovations and frameworks",
+        "checked": false
+      },
+      {
+        "id": "esg_item_2",
+        "name": "Impact investing solutions",
+        "checked": false
+      },
+      {
+        "id": "esg_item_3",
+        "name": "Client success stories",
+        "checked": false
+      },
+      {
+        "id": "esg_item_4",
+        "name": "Regulatory insights",
+        "checked": false
+      }
+    ]
+  },
+  "fintechDigitalInnovation": {
+    "title": "Fintech & Digital Innovation Hub",
+    "items": [
+      {
+        "id": "fintech_item_1",
+        "name": "AI & data solutions in banking",
+        "checked": false
+      },
+      {
+        "id": "fintech_item_2",
+        "name": "Fintech partnerships",
+        "checked": false
+      },
+      {
+        "id": "fintech_item_3",
+        "name": "Blockchain or tokenization use cases",
+        "checked": false
+      },
+      {
+        "id": "fintech_item_4",
+        "name": "Cybersecurity & risk management",
+        "checked": false
+      }
+    ]
+  }
+}

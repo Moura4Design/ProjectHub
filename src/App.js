@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import{ BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './Login/AuthContext ';
+import Login from './Components/Login';
+import Userpage from './Components/UserPage';
+import AuthenticatedRoute from './Login/AuthenticatedRoute ';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  return(
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          {/* Protect routes with the AuthenticatedRoute component */}
+          <Route path='/users' element={<AuthenticatedRoute><Userpage /></AuthenticatedRoute>} />
+        </Routes>
+      </Router>
+    </AuthProvider>
+  )
 }
 
 export default App;
+
+
+

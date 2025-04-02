@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@gmail.com",
+      "name": "Jack",
+      "password": "123456789.A",
+      "token": "mocked-token-1",
+      "data": {
+        "userId": 1,
+        "name": "Jack",
+        "list": []
+      }
+    },
+    {
+      "id": 2,
+      "email": "test2@gmail.com",
+      "name": "James",
+      "password": "987654321.B",
+      "token": "mocked-token-2",
+      "data": {
+        "userId": 2,
+        "name": "James",
+        "list": []
+      }
+    }
+  ]
+}
