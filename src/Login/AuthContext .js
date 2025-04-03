@@ -5,18 +5,18 @@ const Auth = createContext();
 
 const AuthProvider = ({ children }) => {  
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("token") || null);
+  const [token, setToken] = useState(sessionStorage.getItem("token") || null);
 
-  // Load user & token from localStorage on mount
+  // Load user & token from sessionStorage on mount
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
-    const storedToken = localStorage.getItem("token");
+    const storedUser = sessionStorage.getItem("user");
+    const storedToken = sessionStorage.getItem("token");
 
     if (storedUser && storedToken && user === null) {
       setUser(JSON.parse(storedUser));
       setToken(storedToken);
     }
-  }, [user]); // Empty dependency array ensures it runs only once on mount
+  }, [user]);
 
   // Memoize the user and token values to avoid unnecessary re-renders
   const memoizedUser = useMemo(() => user, [user]);
@@ -30,8 +30,8 @@ const AuthProvider = ({ children }) => {
   
       setUser(user.data);
       setToken(token);
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user.data)); // Store user in localStorage
+      sessionStorage.setItem("token", token);
+      sessionStorage.setItem("user", JSON.stringify(user.data)); // Store user in sessionStorage
   
       return true;  // Login successful
     } catch (error) {
@@ -43,8 +43,8 @@ const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setToken(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("user"); // Clear user data
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("user"); // Clear user data
   };
 
   return <Auth.Provider value={{ user: memoizedUser, token: memoizedToken, login, logout}}>{children}</Auth.Provider>;

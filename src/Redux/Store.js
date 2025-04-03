@@ -1,8 +1,7 @@
 import {configureStore} from '@reduxjs/toolkit';
-// import bookListReducer from '../BookSlice';
-// import financeReducer from "./financeSlice";
 import financeReducer from "./FinanceSlice";
 
+// Sets up the Redux store
 const Store = configureStore({
   reducer: {
     financeList: financeReducer
